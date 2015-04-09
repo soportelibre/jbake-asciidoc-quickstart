@@ -15,7 +15,7 @@
     <github.site.version>0.11</github.site.version>
     <github.site.repositoryName>jbake-asciidoc-quickstart</github.site.repositoryName>
     <github.site.repositoryOwner>soportelibre</github.site.repositoryOwner>
-    <github.site.branch>master</github.site.branch>
+    <github.site.branch>gh-pages</github.site.branch>
     <github.site.message>Site update</github.site.message>
     <github.site.noJekyll>true</github.site.noJekyll>
     <github.global.server>github</github.global.server>
