@@ -13,8 +13,8 @@
     <freemarker.version>2.3.22</freemarker.version>
     <asciidoctorj.version>1.5.2</asciidoctorj.version>
     <github.site.version>0.11</github.site.version>
-    <github.site.repositoryName>USERNAME.github.io</github.site.repositoryName>
-    <github.site.repositoryOwner>USERNAME</github.site.repositoryOwner>
+    <github.site.repositoryName>jbake-asciidoc-quickstart</github.site.repositoryName>
+    <github.site.repositoryOwner>soportelibre</github.site.repositoryOwner>
     <github.site.branch>master</github.site.branch>
     <github.site.message>Site update</github.site.message>
     <github.site.noJekyll>true</github.site.noJekyll>
