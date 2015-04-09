@@ -1,11 +1,11 @@
 language: java
-
 jdk:
-  - openjdk7
-
+- openjdk7
 script:
-  - mvn --settings .travis-settings.xml site
-
+- mvn --settings .travis-settings.xml site
 branches:
   only:
   - jbake
+env:
+  global:
+    secure: fXIUpEDZPSXIRzQqVMfzNX+UMWFg7Qedj+z31ZQqHWe6aiUswLLeq6rZMijbM/jfQe4OujFmD1Wf422aARVZ2I6bz4FunBmmEq8sphMy5IBZHDo/AxzQ0Ix3Xxyc1LX1EKpwm11DAXYV7foqQLmvQyKK/+qsxgZSFZGeX5jjaGk=
