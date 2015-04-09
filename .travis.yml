@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+  - openjdk7
+
+script:
+  - mvn --settings .travis-settings.xml site
+
+branches:
+  only:
+  - jbake

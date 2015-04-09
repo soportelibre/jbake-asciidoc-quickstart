@@ -1,0 +1,73 @@
+ <?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>jbake-asciidoc</artifactId>
+  <groupId>org.asciidoctor</groupId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+  <name>JBake AsciiDoc Quickstart</name>
+  <properties>
+    <jbake-maven-plugin.version>0.0.9</jbake-maven-plugin.version>
+    <freemarker.version>2.3.22</freemarker.version>
+    <asciidoctorj.version>1.5.2</asciidoctorj.version>
+    <github.site.version>0.11</github.site.version>
+    <github.site.repositoryName>USERNAME.github.io</github.site.repositoryName>
+    <github.site.repositoryOwner>USERNAME</github.site.repositoryOwner>
+    <github.site.branch>master</github.site.branch>
+    <github.site.message>Site update</github.site.message>
+    <github.site.noJekyll>true</github.site.noJekyll>
+    <github.global.server>github</github.global.server>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>br.com.ingenieux</groupId>
+        <artifactId>jbake-maven-plugin</artifactId>
+        <version>${jbake-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>default-generate</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>${asciidoctorj.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>${github.site.version}</version>
+        <configuration>
+          <repositoryName>${github.site.repositoryName}</repositoryName>
+          <repositoryOwner>${github.site.repositoryOwner}</repositoryOwner>
+          <branch>refs/heads/${github.site.branch}</branch>
+          <message>${github.site.message}</message>
+          <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>site</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
